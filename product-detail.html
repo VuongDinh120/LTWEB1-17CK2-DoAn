@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Product Detail page</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="top-header">
+            <a class="logo" href="#">
+                <img src="./img/logo3_200x200.png" width="150" height="70" alt="Logo">
+            </a>
+            <div class="login-container">
+                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                <a href="#">
+                    <h6>Đăng nhập</h6>
+                </a>
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <a href="#">
+                    <h6>Đăng ký</h6>
+                </a>
+            </div>
+
+        </div>
+        <div class="bottom-header">
+            <a href="index.htm">Trang chủ</a>
+            <a href="#product">Sản phẩm</a>
+            <a href="#contact">Liên hệ</a>
+            <a href="about.htm">Thông tin</a>
+            <div class="search-container">
+                <form action="/action_page.php" method="GET">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm" name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="wrapper-product">
+            <div class="sidenav">
+                <dl>
+                    <dt>Hãng sản xuất</dt>
+                    <dd>
+                        <a href="#">Jean-Billy</a>
+                    </dd>
+                    <dd>
+                        <a href="#">Gucci</a>
+                    </dd>
+                    <dd>
+                        <a href="#">Dolce&Gabbana</a>
+                    </dd>
+                    <dd>
+                        <a href="#">Coach</a>
+                    </dd>
+                    <dt>Loại sản phẩm</dt>
+                    <dd>
+                        <a href="#">Quần áo thể thao</a>
+                    </dd>
+                    <dd>
+                        <a href="#">Quần áo thường</a>
+                    </dd>
+                    <dd>
+                        <a href="#">Đầm váy nữ</a>
+                    </dd>
+                    <dd>
+                        <a href="#">Quần áo nam</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="container-product-detail">
+                <div class="view-product">
+                    <div class="image-show" style="background-image: url('./img/8568c7f31076735d806a9efcd8615e3f.jfif');  background-repeat: no-repeat;
+                            background-size: contain;">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">Jean nữ cá tính</div>
+                        <div class="flex seen">
+                            <div>30 lượt xem</div>
+                            <div>30 đã bán</div>
+                        </div>
+                        <h4 class="product-price">150.000 ₫</h4>
+                        <div class="flex">
+                            <div>Số lượng</div>
+                            <div class="amount">
+                                <button>-</button>
+                                <input type="text" value="1">
+                                <button>+</button>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <button type="button" class="btn btn-primary">Thêm vào giỏ hàng</button>
+                            <button type="button" class="btn btn-danger">Mua ngay</button>
+                        </div>
+                    </div>
+                    <div class="product-detail-info">
+                        <div class="product-detail-label">Thông tin chi tiết</div>
+                        <div class="detail-row">
+                            <label>Xuất xứ</label>
+                            <div>Hà Lan</div>
+                        </div>
+                        <div class="detail-row">
+                            <label>Nhà xản xuất</label>
+                            <div>Hà Lan</div>
+                        </div>
+                        <div class="product-detail-label">Mô tả sản phẩm</div>
+                        <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries,
+                            but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages,
+                            and more recently with desktop publishing software like Aldus PageMaker including versions
+                            of
+                            Lorem Ipsum.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="same-product-container">
+            <h2>Sản phẩm cùng loại</h2>
+            <div class="same-product-list">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <img src="./img/womens-blue-acid-wash-distressed-mom-jeans.jfif" alt="Denim Jeans">
+                        <div class="middle">
+                            <button>Thêm vào giỏ hàng</button>
+                        </div>
+                        <div>
+                            <img src="./img/new.png" class="new" alt="Denim Jeans">
+                        </div>
+                        <h6>Tailored Jeans</h6>
+                        <p class="price">$19.99</p>
+                    </div>
+                    <div class="card">
+                        <img src="./img/8568c7f31076735d806a9efcd8615e3f.jfif" alt="Denim Jeans">
+                        <div class="middle">
+                            <button>Thêm vào giỏ hàng</button>
+                        </div>
+                        <div>
+                            <img src="./img/new.png" class="new" alt="Denim Jeans">
+                        </div>
+                        <h6>Tailored Jeans</h6>
+                        <p class="price">$19.99</p>
+                    </div>
+                    <div class="card">
+                        <img src="./img/8568c7f31076735d806a9efcd8615e3f.jfif" alt="Denim Jeans">
+                        <div class="middle">
+                            <button>Thêm vào giỏ hàng</button>
+                        </div>
+                        <div>
+                            <img src="./img/new.png" class="new" alt="Denim Jeans">
+                        </div>
+                        <h6>Tailored Jeans</h6>
+                        <p class="price">$19.99</p>
+                    </div>
+                    <div class="card">
+                        <img src="./img/womens-blue-acid-wash-distressed-mom-jeans.jfif" alt="Denim Jeans">
+                        <div class="middle">
+                            <button>Thêm vào giỏ hàng</button>
+                        </div>
+                        <div>
+                            <img src="./img/new.png" class="new" alt="Denim Jeans">
+                        </div>
+                        <h6>Tailored Jeans</h6>
+                        <p class="price">$19.99</p>
+                    </div>
+                    <div class="card">
+                        <img src="./img/womens-blue-acid-wash-distressed-mom-jeans.jfif" alt="Denim Jeans">
+                        <div class="middle">
+                            <button>Thêm vào giỏ hàng</button>
+                        </div>
+                        <div>
+                            <img src="./img/new.png" class="new" alt="Denim Jeans">
+                        </div>
+                        <h6>Tailored Jeans</h6>
+                        <p class="price">$19.99</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© Fashion Clothes Store | Design by Sức Trẻ</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

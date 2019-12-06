@@ -1,256 +1,389 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #f5f5f5;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
 a {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 div {
-    display: block;
+  display: block;
 }
 
 .header {
-    position: relative;
+  position: relative;
 }
 
 .top-header {
-    padding: 10px 0px;
-    padding-left: 10%;
-    background-color: #fff;
+  padding: 10px 0px;
+  padding-left: 10%;
+  background-color: #fff;
 }
 
 div.login-container {
-    float: right;
-    margin-right: 50px;
-    margin-top: 10px;
+  float: right;
+  margin-right: 50px;
+  margin-top: 10px;
 }
 
 .login-container a {
-    display: inline-block;
-    padding: 14px 16px;
-    color: #212121;
+  display: inline-block;
+  padding: 14px 16px;
+  color: #212121;
 }
 
 .login-container a:hover {
-    color: #3597f1;
+  color: #3597f1;
 }
 
 .bottom-header {
-    padding: 0px;
-    overflow: hidden;
-    background-color: #f8f8f8;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #f8f8f8;
 }
 
 div.bottom-header {
-    padding-left: 15%;
+  padding-left: 15%;
 }
 
 .bottom-header a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    height: 75px;
-    line-height: 200%;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  height: 75px;
+  line-height: 200%;
 }
 
 .bottom-header a:hover {
-    background-color: #111;
-    color: whitesmoke;
+  background-color: #111;
+  color: whitesmoke;
 }
 
 .bottom-header .search-container {
-    float: right;
-    margin-right: 50px;
+  float: right;
+  margin-right: 50px;
 }
 
-.bottom-header input[type=text] {
-    padding: 12px 16px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
+.bottom-header input[type="text"] {
+  padding: 12px 16px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
 }
 
 .bottom-header .search-container button {
-    float: right;
-    padding: 12px 16px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ddd;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
+  float: right;
+  padding: 12px 16px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
 }
 
 .bottom-header .search-container button:hover {
-    background-color: #111;
-    color: whitesmoke;
+  background-color: #111;
+  color: whitesmoke;
 }
 
 .wrapper {
-    box-sizing: content-box;
-    width: 90%;
-    height: auto;
-    overflow: auto;
-    margin: auto;
-    padding: 0px;
+  box-sizing: content-box;
+  width: 90%;
+  height: auto;
+  overflow: auto;
+  margin: auto;
+  padding: 0px;
+}
+.wrapper-product{
+  position: relative;
+  display: block;
+  overflow: hidden
 }
 
 .sidenav {
-    position: relative;
-    float: left;
-    width: 20%;
-    margin: 50px 20px;
-    margin-left: 0px;
-    margin-bottom: 40%;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  float: left;
+  width: 20%;
+  margin: 50px 20px;
+  margin-left: 0px;
+  margin-bottom: 40%;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .sidenav dl dt {
-    padding: 5px 0px;
-    background-color: #666666;
-    color: #f5f5f5;
-    text-align: center;
+  padding: 5px 0px;
+  background-color: #666666;
+  color: #f5f5f5;
+  text-align: center;
 }
 
 .sidenav dl {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .sidenav dl dd {
-    background-color: #f1f1f1;
-    margin-bottom: 0px;
+  background-color: #f1f1f1;
+  margin-bottom: 0px;
 }
 
 .sidenav dl dd a {
-    display: block;
-    padding: 5px 0px;
-    padding-left: 20px;
-    text-decoration: none;
-    color: black;
+  display: block;
+  padding: 5px 0px;
+  padding-left: 20px;
+  text-decoration: none;
+  color: black;
 }
 
 .sidenav dl dd a:hover {
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: black;
 }
-
+/*index css*/
 .container {
-    float: left;
-    position: relative;
-    width: 75%;
-    margin: 50px 20px;
-    margin-right: 0px;
-    padding: 0px;
+  float: left;
+  position: relative;
+  width: 75%;
+  margin: 50px 20px;
+  margin-right: 0px;
+  padding: 0px;
 }
 
 .card {
-    float: left;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 185px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-    margin: 0px 10px 20px 10px;
-    cursor: pointer;
+  float: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 185px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin: 0px 10px 20px 10px;
+  cursor: pointer;
 }
 
 .card p:last-child {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .price {
-    color: grey;
-    font-size: 22px;
+  color: grey;
+  font-size: 22px;
 }
 
 .card button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-    opacity: 0.7;
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  opacity: 0.7;
 }
 
 .card button:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-.card>img {
-    width: 100%;
-    max-height: 276px;
+.card > img {
+  width: 100%;
+  max-height: 276px;
 }
 
 .new,
 .sale {
-    position: absolute;
-    top: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .card-wrapper {
-    display: block;
-    float: left;
+  display: block;
+  float: left;
 }
 
 .pagination-wrapper {
-    display: block;
-    clear: left;
+  display: block;
+  clear: left;
 }
 
 .middle {
-    transition: 0.5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .card:hover img {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
 .card:hover .middle {
-    opacity: 1;
+  opacity: 1;
 }
 
 .card:hover h6:hover {
-    color: #FE980F;
+  color: #fe980f;
 }
 
 .hot-product-wrapper {
-    display: block;
+  display: block;
 }
 
+/*product detail css*/
+.container-product-detail {
+  float: left;
+  position: relative;
+  width: 75%;
+  margin: 50px 20px;
+  margin-right: 0px;
+  padding: 10px;
+  /*background-color: #f5f5f5;*/
+}
+.view-product {
+  position: relative;
+  width: auto;
+}
+.image-show {
+  float: left;
+  width: 35%;
+  height: 460px;
+  background-position: 50%;
+}
+.product-info {
+  float: left;
+  width: 60%;
+  height: auto;
+  margin-left: 5px;
+  padding: 10px 20px;
+  text-align: justify;
+  background-color: #fff;
+  border: 1px solid #f7f7f0;
+}
+.product-name {
+  text-align: center;
+  font-size: 1.875rem;
+}
+.product-price {
+  margin-top: 15px;
+  color: red;
+  text-align: center;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seen {
+  margin-top: 10px;
+}
+.seen > div {
+  border-right: #666666 solid 1px;
+  font-size: 0.875rem;
+  color: #767676;
+  text-transform: capitalize;
+  padding: 0px 10px;
+}
+.flex div:last-child {
+  border-right: 0;
+}
+.amount {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.amount button {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1;
+  padding: 0px 10px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  width: 2rem;
+  height: 2rem;
+}
+.amount button:hover {
+  background-color: #999;
+  color: #fff;
+}
+.amount input[type="text"] {
+  width: 3.125rem;
+  height: 2rem;
+  text-align: center;
+  cursor: text;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.product-detail-info {
+  float: left;
+  width: 60%;
+  height: auto;
+  margin-left: 5px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #f7f7f0;
+}
+
+.product-detail-label {
+  text-align: center;
+  font-size: 1.875rem;
+  margin-bottom: 20px;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.detail-row label {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.875rem;
+  width: 6.25rem;
+  margin-right: 2.5rem;
+}
+.same-product-container{
+  width: 90%;
+  margin: auto;
+}
+.same-product-container h2{
+  text-align: center;
+  
+}
+.same-product-list{
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+
+/*footer css*/
 .footer {
-    display: block;
-    width: 100%;
-    background-color: #212121;
-    color: #999;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  display: block;
+  width: 100%;
+  background-color: #212121;
+  color: #999;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .footer p {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
