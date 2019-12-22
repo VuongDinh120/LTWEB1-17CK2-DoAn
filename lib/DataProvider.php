@@ -3,7 +3,7 @@
     {
         public static function ExecuteQuery($sql)
         {
-            $connection = mysqli_connect('localhost:8080', 'root', 'root', 'YouthShop') or die("couldn't connect to localhost");
+            $connection = mysqli_connect('localhost', 'root', '', 'YouthShop') or die("couldn't connect to localhost");
             mysqli_query($connection, "set names 'utf8'");
             $result = mysqli_query($connection, $sql);
             mysqli_close($connection);
@@ -13,7 +13,7 @@
         public static function ChangeURL($path)
         {
             echo '<script type = "text/javascript">';
-            echo 'location = "' . $path . '";';
+            echo 'location = "./'. $path.'";';
             echo '</script>';
         }
     }

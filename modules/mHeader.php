@@ -1,5 +1,5 @@
 <?php
-if (isset($_SESSION["MaTaiKhoan"])) {
+if (!isset($_SESSION["MaTaiKhoan"])) {
 ?>
     <div id="myModal" class="modal fade">
         <div class="modal-dialog modal-login">
@@ -59,7 +59,7 @@ if (isset($_SESSION["MaTaiKhoan"])) {
                 <a href="#" data-toggle="modal" data-target="#myModal">
                     <h6>Đăng nhập</h6>
                 </a>
-                <a href="/index.php?a=6">
+                <a href="./index.php?a=6">
                     <h6>Đăng ký</h6>
                 </a>
 

@@ -7,7 +7,7 @@
         {
     ?>
         <dd>
-        <a href="/index.php?a=2&id=<?php echo $row["MaHangSanXuat"];?>"><?php echo $row["TenHangSanXuat"] ?></a>
+        <a href="index.php?a=2&id=<?php echo $row["MaHangSanXuat"];?>"><?php echo $row["TenHangSanXuat"] ?></a>
     </dd>
     <?php
         }

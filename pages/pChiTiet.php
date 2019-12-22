@@ -24,7 +24,7 @@ if($row == null)
                 <div><?php echo $row["SoLuotXem"] + 1; ?> lượt xem</div>
                 <div><?php echo $row["SoLuongNhap"] - $row["SoLuongTon"]; ?> đã bán</div>
             </div>
-            <h4 class="product-price"><?php echo $row["GiaSanPham"]; ?> ₫</h4>
+            <h4 class="product-price"><?php echo number_format($row["GiaSanPham"]); ?> ₫</h4>
             <div class="flex">
                 <div style="padding-bottom: 21px;">Số lượng</div>
                 <div class="amount">

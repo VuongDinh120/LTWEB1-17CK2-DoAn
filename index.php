@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "lib/DataProvider.php";
+include "./lib/DataProvider.php";
 
 $_SESSION["path"] = $_SERVER["REQUEST_URI"];
 ?>
@@ -18,15 +18,16 @@ $_SESSION["path"] = $_SERVER["REQUEST_URI"];
 
 <body>
     <?php
-    include "modules/mHeader.php"
+    include "./modules/mHeader.php"
     ?>
 
     <?php
     $a = 1;
     if (isset($_GET["a"]) == true)
         $a = $_GET["a"];
-    if ($a == 1)
+    if ($a == 1) {
         include "./pages/pCarousel.php";
+    }
 
     switch ($a) {
         case 1:
@@ -38,7 +39,7 @@ $_SESSION["path"] = $_SERVER["REQUEST_URI"];
                 break;
                 ?>
             </div>
-
+                
         <?php
         case 2:
         ?>
@@ -86,9 +87,9 @@ $_SESSION["path"] = $_SERVER["REQUEST_URI"];
             break;
     }
     ?>
-
+    </div>
     <?php
-    include "modules/mFooter.php";
+    include "./modules/mFooter.php";
     ?>
 
 </body>

@@ -19,7 +19,7 @@
                         <button>Thêm vào giỏ hàng</button>
                     </div>
                     <h6><?php echo $row["TenSanPham"]; ?></h6>
-                    <p class="price"><?php echo $row["GiaSanPham"]; ?>đ</p>
+                    <p class="price"><?php echo number_format($row["GiaSanPham"]); ?>₫</p>
                 </div>
             <?php
             }

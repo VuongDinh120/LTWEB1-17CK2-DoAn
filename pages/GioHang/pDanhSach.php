@@ -30,7 +30,7 @@
                             <td scope="row"><?php echo $i; ?></td>
                             <td class="cart_name"><?php echo $row["TenSanPham"]; ?></td>
                             <td class="cart_image"><img src="image/<?php echo $row["HinhURL"]; ?>"></td>
-                            <td class="cart_price"><?php echo $row["GiaSanPham"]; ?> ₫</td>
+                            <td class="cart_price"><?php echo number_format($row["GiaSanPham"]); ?>₫</td>
                             <td class="cart_quantity">
                                 <div class="amount">
                                     <button id="decrease" onclick="decreaseValue()" value="Decrease Value">-</button>
@@ -40,7 +40,7 @@
                                     <input type="hidden" name="hdID" value="<?php echo $gioHang->listProduct[$i]->id; ?>" />
                                 </div>
                             </td>
-                            <td class="cart_total"><?php echo $row["GiaSanPham"] * $gioHang->listProduct[$i]->num; ?> ₫</td>
+                            <td class="cart_total"><?php echo number_format($row["GiaSanPham"] * $gioHang->listProduct[$i]->num) ; ?>₫</td>
                             <td class="cart_update">
                                 <button type="submit" class="btn btn-info">Cập nhật</button>
                             </td>
@@ -71,6 +71,6 @@
         $_SESSION["TongGia"] = $tongGia;
         ?>
     </table>
-    <div class="total-price">TỔNG CỘNG: <?php echo $tongGia ?> đ</div>
+    <div class="total-price">TỔNG CỘNG: <?php echo number_format($tongGia) ?>₫</div>
     <div class="order"><button type="button" class="btn btn-info" onclick='location.href="/pages/GioHang/xlDatHang.php";'>Đặt hàng</button></div>
 </div>
