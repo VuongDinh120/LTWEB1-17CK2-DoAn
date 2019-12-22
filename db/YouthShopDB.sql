@@ -141,6 +141,7 @@ CREATE TABLE IF NOT EXISTS `TaiKhoan` (
   `TenHienThi` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
   `DiaChi` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL,
   `DienThoai` varchar(11) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `NgaySinh` date DEFAULT NULL,
   `Email` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
   `BiXoa` tinyint(1) DEFAULT '0',
   `MaLoaiTaiKhoan` int(11) NOT NULL,
