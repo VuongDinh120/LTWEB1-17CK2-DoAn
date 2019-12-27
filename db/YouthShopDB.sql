@@ -69,6 +69,18 @@ CREATE TABLE IF NOT EXISTS `HangSanXuat` (
   PRIMARY KEY (`MaHangSanXuat`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
+--
+-- Dumping data for table `HangSanXuat`
+--
+
+INSERT INTO `HangSanXuat` (`MaHangSanXuat`, `TenHangSanXuat`, `BiXoa`) VALUES
+(1, 'Revell', 0),
+(2, 'Lego', 0),
+(3, 'Lamaze', 0),
+(4, 'vTech', 0),
+(5, 'Rastar', 0),
+(6, 'Syma', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -81,6 +93,22 @@ CREATE TABLE IF NOT EXISTS `LoaiSanPham` (
   `BiXoa` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`MaLoaiSanPham`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
+
+--
+-- Dumping data for table `LoaiSanPham`
+--
+
+INSERT INTO `LoaiSanPham` (`MaLoaiSanPham`, `TenLoaiSanPham`, `BiXoa`) VALUES
+(1, 'Thú nhồi bông', 0),
+(2, 'Đồ chơi nhựa', 0),
+(3, 'Đồ chơi điện tử', 0),
+(4, 'Điều khiển từ xa', 0),
+(5, 'Đồ chơi trí tuệ', 0),
+(6, 'Đồ xịn', 0),
+(7, 'Đồ dỏm của CHINA', 0),
+(8, 'Đồ chời bưởi', 0),
+(9, 'Đồ chời bưởi', 0),
+(10, 'abc', 0);
 
 -- --------------------------------------------------------
 
@@ -127,6 +155,41 @@ CREATE TABLE IF NOT EXISTS `SanPham` (
   KEY `fk_SanPham_LoaiSanPham1_idx` (`MaLoaiSanPham`),
   KEY `fk_SanPham_HangSanXuat1_idx` (`MaHangSanXuat`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=34 ;
+
+--
+-- Dumping data for table `SanPham`
+--
+
+INSERT INTO `SanPham` (`MaSanPham`, `TenSanPham`, `HinhURL`, `GiaSanPham`, `NgayNhap`, `SoLuongTon`, `SoLuongBan`, `SoLuotXem`, `MoTa`, `BiXoa`, `MaLoaiSanPham`, `MaHangSanXuat`) VALUES
+(4, 'Bill D. Beaver', '8568c7f31076735d806a9efcd8615e3f.jfif', 160000, '2012-08-25 00:00:00', 14, 9, 25, 'Hải lý bằng bông mịn, đẹp, dễ thương', 0, 1, 3),
+(5, 'Captain Calamari', '8568c7f31076735d806a9efcd8615e3f.jfif', 180000, '2012-05-01 00:00:00', 14, 6, 4, 'Bạch tuộc biển', 0, 1, 3),
+(7, 'Elephantunes', '8568c7f31076735d806a9efcd8615e3f.jfif', 480000, '2012-09-12 00:00:00', 25, 2, 9, 'Voi bằng bông, hồng xì tin...', 0, 1, 3),
+(8, 'Freddie the Firefly', '8568c7f31076735d806a9efcd8615e3f.jfif', 300000, '2012-07-03 00:00:00', 30, 0, 8, 'Bướm nhồi bông', 0, 1, 3),
+(9, 'Supper Mario', '8568c7f31076735d806a9efcd8615e3f.jfif', 380000, '2012-01-01 00:00:00', 24, 6, 14, 'Bộ lấp áp Lego trò chơi Mario', 0, 5, 2),
+(10, 'Nasa Academy Space', '8568c7f31076735d806a9efcd8615e3f.jfif', 220000, '2012-08-15 00:00:00', 28, 7, 8, 'Tàu con thoi của Nasa', 0, 3, 1),
+(11, 'Lamborghini Revention', '8568c7f31076735d806a9efcd8615e3f.jfif', 260000, '2012-09-01 00:00:00', 38, 3, 38, 'Siêu xe Lamborghini Revention', 0, 3, 1),
+(12, 'Camaro SS', '8568c7f31076735d806a9efcd8615e3f.jfif', 260000, '2012-10-02 00:00:00', 20, 0, 0, 'Xe đua Camaro SS', 0, 3, 1),
+(13, 'Pond Motion Gym', '8568c7f31076735d806a9efcd8615e3f.jfif', 920000, '2012-10-04 00:00:00', 10, 2, 14, 'Niệm lót cho trẻ em', 0, 1, 3),
+(14, 'Stacking Rings', '8568c7f31076735d806a9efcd8615e3f.jfif', 240000, '2012-09-25 00:00:00', 5, 5, 1, 'Vòng xoay kỳ thú, kích thích sự tò mò của trẻ', 0, 1, 3),
+(15, 'Octivity Time', '8568c7f31076735d806a9efcd8615e3f.jfif', 270000, '2012-08-27 00:00:00', 19, 3, 3, 'Bé mặt trời xanh', 0, 1, 3),
+(16, 'Mittens the Kitten', '8568c7f31076735d806a9efcd8615e3f.jfif', 190000, '2012-07-13 00:00:00', 50, 3, 5, 'Chú mèo ngộ nghĩnh', 0, 1, 3),
+(17, 'Feel Me Fish', '8568c7f31076735d806a9efcd8615e3f.jfif', 180000, '2012-09-15 00:00:00', 60, 3, 2, 'Chú cá vàng đa sắc', 0, 1, 3),
+(18, 'Huey the Hedgehog', '8568c7f31076735d806a9efcd8615e3f.jfif', 200000, '2012-09-14 00:00:00', 30, 30, 22, 'Nhiếm bảy màu, mang đến sự may mắn cho bé', 0, 1, 3),
+(19, 'Neat-Oh!', '8568c7f31076735d806a9efcd8615e3f.jfif', 110000, '2012-06-12 00:00:00', 19, 13, 24, 'Túi đồ chơi xây dựng công viên của Lego', 0, 5, 2),
+(20, 'Ninjago 2172', '8568c7f31076735d806a9efcd8615e3f.jfif', 160000, '2012-07-12 00:00:00', 20, 12, 13, 'Bộ xếp hình Lego thời Ai Cập cổ đại', 0, 5, 2),
+(21, 'Mexican', '8568c7f31076735d806a9efcd8615e3f.jfif', 140000, '2012-08-17 00:00:00', 35, 12, 12, 'Bộ xếp hình Lego nhạc công Mehico', 0, 5, 2),
+(22, 'Star Wars', '8568c7f31076735d806a9efcd8615e3f.jfif', 500000, '2012-10-05 00:00:00', 24, 28, 30, 'Bộ xếp hình Lego phi thuyền trong cuộc chiến tranh giữa các vì sao', 0, 5, 2),
+(23, 'City Park Cafe 3061', '8568c7f31076735d806a9efcd8615e3f.jfif', 950000, '2012-10-07 00:00:00', 30, 2, 24, 'Bộ xếp hình xây dựng shop cafe trong thành phố ', 0, 5, 2),
+(24, 'Bright Lights Ball', '8568c7f31076735d806a9efcd8615e3f.jfif', 150000, '2012-10-08 00:00:00', 39, 2, 6, 'Quả cầu thông minh', 0, 2, 4),
+(25, 'Baby''s Laptop', '8568c7f31076735d806a9efcd8615e3f.jfif', 240000, '2012-09-07 00:00:00', 38, 2, 4, 'Laptop thông tin của trẻ em, giúp trẻ phát triển tư duy trí tuệ', 0, 2, 4),
+(26, 'Toot Driver Garage', '8568c7f31076735d806a9efcd8615e3f.jfif', 620000, '2012-10-07 00:00:00', 20, 12, 30, 'Bãi đỗ xe trong thành phố, sẽ giúp bé tự điều hành việc hoạt động của một bãi đỗ xe hiện đại trong thành phố', 0, 2, 4),
+(27, 'Emergency Vehicles (3-Pack)', '8568c7f31076735d806a9efcd8615e3f.jfif', 223000, '2012-10-02 00:00:00', 20, 12, 3, 'Bộ sản phẩm 3 xe đồ chơi, đẹp, dễ thương và an toàn với trẻ', 0, 2, 4),
+(28, 'Lamborghini Murcielago', '8568c7f31076735d806a9efcd8615e3f.jfif', 300000, '2012-10-01 00:00:00', 10, 1, 2, 'Xe điều khiển từ xa Lamborghini', 0, 4, 5),
+(29, 'Rover Sport HSE', '8568c7f31076735d806a9efcd8615e3f.jfif', 320000, '2012-09-30 00:00:00', 10, 3, 2, 'Xe điều khiển Rover, vượt mọi địa hình, sức mạnh của trâu', 0, 4, 5),
+(30, 'Apache Helicopter', '8568c7f31076735d806a9efcd8615e3f.jfif', 625000, '2012-10-01 00:00:00', 4, 2, 1, 'Máy bay chiến đâu siêu đa năng Apache', 0, 4, 6),
+(31, 'Micro Helicopter', '8568c7f31076735d806a9efcd8615e3f.jfif', 560000, '2012-10-05 00:00:00', 2, 6, 5, 'Máy bay lên thẳng đa dụng', 0, 4, 6),
+(32, 'Micro Chinook', '8568c7f31076735d806a9efcd8615e3f.jfif', 410000, '2012-10-06 00:00:00', 3, 0, 0, 'Máy bay trực thăng vận tải, đa dụng, có thể vận chuyển được xe tăng', 0, 4, 6),
+(33, 'X1 - 01', '8568c7f31076735d806a9efcd8615e3f.jfif', 600000, '2012-10-06 00:00:00', 4, 0, 15, 'Máy bay lên thẳng 4 cánh quạt, đa dụng và dễ dàng điều khiển vượt qua mọi địa hình', 0, 4, 6);
 
 -- --------------------------------------------------------
 

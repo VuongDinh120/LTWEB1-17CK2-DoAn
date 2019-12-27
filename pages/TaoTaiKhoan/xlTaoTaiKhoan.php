@@ -4,8 +4,8 @@
 
     if(isset($_POST["us"]))
     {
-        $us = $_POST["txtUS"];
-        $ps = $_POST["txtPS"];
+        $us = $_POST["us"];
+        $ps = $_POST["ps"];
         $name = $_POST["txtFname"].$_POST["txtLname"];
         $birth = $_POST["lsbYear"].'-'.$_POST["lsbMonth"].'-'.$_POST["lsbDate"];
         $add = $_POST["txtDiaChi"];
@@ -40,4 +40,3 @@
     {
         DataProvider::ChangeURL("../../index.php?a=404");
     }
-?>

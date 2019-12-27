@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Set height of body and the document to 100% */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.header h1 {
+  text-align: center;
+  color: palegoldenrod;
+}
+.nav {
+  position: relative;
+  width: 100%;
+  background-color: #70c5c0;
+}
+.container {
+  
+  max-width: 100%;
+  height: max-content;
+  min-height: 100%;
+  margin: auto;
+  margin-top: 10px;
+  
+  padding: 0;
+}
+.contain{
+  width: 40%; 
+  margin: auto; 
+}
+.containz{
+  width: 70%; 
+  margin: auto; 
+}
+.inform {
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px groove;
+  text-align: center;
+  margin-bottom: 20px;
+}
+fieldset table{
+  width: auto;
+  margin-left: 33%;
+}
+
+fieldset table td{
+  width: 50%;
+  font-size: 20px;
+}
+fieldset table tr td:first-child{
+  font-weight: bold;
+  text-align: right;
+  padding-right: 20px;
+}
+fieldset table tr td:last-child{
+  text-align: left;
+ 
+}
+legend{width:inherit;;}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+th {
+  background-color: #70c5c0;
+  color: white;
+}
+th,
+td {
+  font-size: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+.footer {
+  float: left;
+  width: 100%;
+  background-color: #212121;
+  color: #999;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footer p {
+  margin-bottom: 0px;
+}
+.action a {
+  display: inline-block;
+  cursor: pointer;
+}
+.update:hover {
+  color: seagreen;
+}
+.remove:hover {
+  color: red;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: #70c5c0;
+}
+.nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav a.active {
+  background-color: black;
+  color: white;
+}
+
+label {
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+.err {
+  font-weight: 12px;
+  color: #dc3545;
+}
+
+.login {
+  float: right;
+ 
+}
+.login a{
+  float: right;
+}
+.login a:hover {
+  background-color: initial;
+}
+#home h1{
+    text-align: center;
+}
+.classGiaoHang{
+  background-color: #ffc107 !important;
+}
+.classThanhToan{
+  background-color: #22a0ea !important;
+}
+.classHuy{
+  background-color: tomato !important;
+}
+.inform a{
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+}
+

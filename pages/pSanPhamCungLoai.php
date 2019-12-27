@@ -9,12 +9,12 @@
             else
                 DataProvider::ChangeURL("index.php?a=404");
 
-            $sql = "SELECT * FROM SanPham WHERE BiXoa = 0 AND MaLoaiSanPham = $id ORDER BY RAND() LIMIT 0,5;";
+            $sql = "SELECT * FROM SanPham WHERE BiXoa = 0 AND MaLoaiSanPham = $id ";
             $result = DataProvider::ExecuteQuery($sql);
             while ($row = mysqli_fetch_array($result)) {
             ?>
                 <div class="card" onclick='location.href=" index.php?a=4&id=<?php echo $row["MaSanPham"]; ?>";'>
-                    <img src="/image/<?php echo $row["HinhURL"]; ?>">
+                    <img src="image/<?php echo $row["HinhURL"]; ?>">
                     <div class="middle">
                         <button>Thêm vào giỏ hàng</button>
                     </div>

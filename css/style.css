@@ -18,6 +18,11 @@ div {
   display: block;
 }
 
+.err{
+  font-weight: bold;
+  color:#dc3545;
+}
+
 .header {
   position: relative;
 }
@@ -115,8 +120,7 @@ div.bottom-header {
   position: relative;
   float: left;
   width: 20%;
-  margin: 0px 20px 50px 0px;
-  margin-bottom: 10%;
+  margin: 0px 20px 30px 0px;
   border-top: 0;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -374,7 +378,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .detail-row label {
   color: rgba(0, 0, 0, 0.4);
   font-size: 0.875rem;
-  width: 6.25rem;
+  width: 7.00rem;
   margin-right: 2.5rem;
 }
 .same-product-container {
@@ -532,7 +536,7 @@ select {
   background-color: #f1f1f1;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 2;
 }
 
 .dropdown-content a {
