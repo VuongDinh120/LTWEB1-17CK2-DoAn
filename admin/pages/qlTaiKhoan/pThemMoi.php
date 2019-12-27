@@ -1,18 +1,8 @@
-<?php
-
-$id = $_GET["id"];
-$sql = "SELECT * FROM TaiKhoan WHERE MaTaiKhoan = $id";
-$result = DataProvider::ExecuteQuery($sql);
-$row = mysqli_fetch_array($result);
-$TenDangNhap = $row["TenDangNhap"];
-$MaLoaiTaiKhoan = $row["MaLoaiTaiKhoan"];
-
-?>
 <div class="modal fade" id="myModal">
     <div class="modal-dialog ">
         <div class="modal-content">
-            <form action="pages/qlTaiKhoan/xlCapNhat.php" method="POST" onsubmit="return KiemTra();">
-                <!-- Modal Header -->
+            <!-- Modal Header -->
+            <form action="pages/qlTaiKhoan/xlThemMoi.php" method="POST">
                 <div class="modal-header" style="border-bottom-width: 0px;">
                     <h4 class="modal-title">Thông tin tài khoản</h4>
                     <button type="button" class="close" data-dismiss="modal">
@@ -26,14 +16,13 @@ $MaLoaiTaiKhoan = $row["MaLoaiTaiKhoan"];
 
                     <div class="form-group">
                         <label for="txtUS">Tên đăng nhập</label>
-                        <input type="text" name="txtUS" class="form-control" id="txtUS" value="<?php echo $TenDangNhap; ?>">
-                        <div class="err" id="errUS"></div>
-                        <input type="hidden" name="id" class="form-control" id="txtID" value="<?php echo $id ?>">
+                        <input type="text" name="txtUS" class="form-control" id="txtUS" value="">
+                        <input type="hidden" name="id" class="form-control" id="txtID" value="">
                     </div>
                     <div class="form-group">
                         <label for="txtPS">Mật Khẩu</label>
-                        <input type="text" name="txtPS" class="form-control" id="txtPS" value="<?php echo $row["MatKhau"]; ?>">
-                        <div class="err" id="errPS"></div>
+                        <input type="text" name="txtPS" class="form-control" id="txtPS" value="">
+
                     </div>
                     <div class="form-group">
                         <label for="cmbLoaiTK">Loại tài khoản</label>
@@ -41,24 +30,23 @@ $MaLoaiTaiKhoan = $row["MaLoaiTaiKhoan"];
                             <?php
                             $sql = "SELECT * FROM LoaiTaiKhoan";
                             $result = DataProvider::ExecuteQuery($sql);
-                            while ($row1 = mysqli_fetch_array($result)) {
-                                if ($row1["MaLoaiTaiKhoan"] == $MaLoaiTaiKhoan)
-                                    echo "<option value='" . $row1["MaLoaiTaiKhoan"] . "' selected>" . $row1["TenLoaiTaiKhoan"] . "</option>";
+                            while ($row = mysqli_fetch_array($result)) {
+                                if ($row["MaLoaiTaiKhoan"] == $MaLoaiTaiKhoan)
+                                    echo "<option value='" . $row["MaLoaiTaiKhoan"] . "' selected>" . $row["TenLoaiTaiKhoan"] . "</option>";
                                 else
-                                    echo "<option value='" . $row1["MaLoaiTaiKhoan"] . "'>" . $row1["TenLoaiTaiKhoan"] . "</option>";
+                                    echo "<option value='" . $row["MaLoaiTaiKhoan"] . "'>" . $row["TenLoaiTaiKhoan"] . "</option>";
                             }
                             ?>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="txtName">Tên Hiển Thị</label>
-                        <input type="text" name="txtName" class="form-control" id="txtName" value="<?php echo $row["TenHienThi"]; ?>">
-                        <div class="err" id="errName"></div>
+                        <input type="text" name="txtName" class="form-control" id="txtName" value="">
+
                     </div>
                     <div class="form-group">
                         <label for="txtADD">Địa Chỉ</label>
-                        <input type="text" name="txtADD" class="form-control" id="txtADD" value="<?php echo $row["DiaChi"]; ?>">
-                        <div class="err" id="errADD"></div>
+                        <input type="text" name="txtADD" class="form-control" id="txtADD" value="">
                     </div>
                 </div>
 

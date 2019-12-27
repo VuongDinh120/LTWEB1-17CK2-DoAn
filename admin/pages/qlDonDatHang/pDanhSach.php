@@ -1,6 +1,14 @@
 <a href="index.php?c=3&a=1" role="button" class="btn btn-success">
     Thêm đơn hàng
 </a>
+<div class="search-container">
+    <form action="index.php" method="GET">
+        <input type="text" placeholder="Loại sản phẩm" name="txtSearch">
+        <input type="hidden" placeholder="Loại sản phẩm" name="c" value="3">
+        <input type="hidden" placeholder="Loại sản phẩm" name="a" value="0">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
 <table class="table table-striped table-hover" id="myTable">
     <thead>
         <tr class="bg-danger" style="color: white;">
@@ -14,10 +22,20 @@
     </thead>
     <tbody>
         <?php
-        $sql = "SELECT d.MaDonDatHang, d.NgayLap, d.MaTinhTrang, t.TenHienThi, tt.TenTinhTrang 
-        FROM DonDatHang d, TaiKhoan t, TinhTrang tt 
-        WHERE d.MaTaiKhoan = t.MaTaiKhoan and d.MaTinhTrang = tt.MaTinhTrang
-        ORDER BY d.MaTinhTrang, d.NgayLap";
+        if(isset($_GET["txtSearch"]))
+        {
+            $ten = $_GET["txtSearch"];
+            $sql = "SELECT d.MaDonDatHang, d.NgayLap, d.MaTinhTrang, t.TenHienThi, tt.TenTinhTrang 
+            FROM DonDatHang d, TaiKhoan t, TinhTrang tt 
+            WHERE d.MaTaiKhoan = t.MaTaiKhoan and d.MaTinhTrang = tt.MaTinhTrang AND (d.MaDonDatHang LIKE '%$ten%' OR t.TenHienThi LIKE '%$ten%' OR tt.TenTinhTrang LIKE '%$ten%') ";
+        }
+        else{
+            $sql = "SELECT d.MaDonDatHang, d.NgayLap, d.MaTinhTrang, t.TenHienThi, tt.TenTinhTrang 
+            FROM DonDatHang d, TaiKhoan t, TinhTrang tt 
+            WHERE d.MaTaiKhoan = t.MaTaiKhoan and d.MaTinhTrang = tt.MaTinhTrang
+            ORDER BY d.MaTinhTrang, d.NgayLap";
+        }
+       
         $result = DataProvider::ExecuteQuery($sql);
         $i=1;
         while ($row = mysqli_fetch_array($result)) {

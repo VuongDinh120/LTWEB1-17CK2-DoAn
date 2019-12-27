@@ -1,5 +1,5 @@
 <div id="qlNhaSX" class="containz">
-    <h3 style="text-align:center">Quản lý Loại Sản Phẩm</h3>
+    <h3 style="text-align:center">Quản lý hãng sản xuất</h3>
     <?php
     $a = 1;
     if (isset($_GET["a"]))

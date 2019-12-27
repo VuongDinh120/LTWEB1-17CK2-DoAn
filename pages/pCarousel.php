@@ -1,8 +1,8 @@
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -12,12 +12,12 @@
                 <p>Cùng khám phá và trải nghiệm các sản phẩm độc đáo của chúng tôi</p>
             </div>
         </div>
-        <div class="carousel-item">
+        <!-- <div class="carousel-item">
             <img src="./img/slide-3.jpg" class="d-block w-100" alt="no hinh">
         </div>
         <div class="carousel-item">
             <img src="./img/img (35).jpg" class="d-block w-100" alt="no hinh">
-        </div>
+        </div> -->
 
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

@@ -1,6 +1,14 @@
 <a href="index.php?c=2&a=2" role="button" class="btn btn-success">
     Thêm sản phẩm mới
 </a>
+<div class="search-container">
+    <form action="index.php" method="GET">
+        <input type="text" placeholder="Loại sản phẩm" name="txtSearch">
+        <input type="hidden" name="c" value="2">
+        <input type="hidden" name="a" value="1">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
 <table class="table table-striped table-hover" id="myTable">
     <thead>
         <tr class="bg-danger" style="color: white;">
@@ -22,11 +30,23 @@
     </thead>
     <tbody>
         <?php
-        $sql = "SELECT s.MaSanPham, s.TenSanPham, s.HinhURL, s.GiaSanPham, s.NgayNhap 
-        , s.SoLuongTon, s.SoLuongBan, s.SoLuotXem, s.XuatXu, s.MoTa, s.BiXoa, l.TenLoaiSanPham, 
-        h.TenHangSanXuat 
-        FROM SanPham s, LoaiSanPham l, HangSanXuat h WHERE s.MaLoaiSanPham = l.MaLoaiSanPham 
-        AND s.MaHangSanXuat=h.MaHangSanXuat ORDER BY s.MaSanPham ASC";
+        if(isset($_GET["txtSearch"]))
+        {
+            $ten = $_GET["txtSearch"];
+            $sql = "SELECT s.MaSanPham, s.TenSanPham, s.HinhURL, s.GiaSanPham, s.NgayNhap 
+            , s.SoLuongTon, s.SoLuongBan, s.SoLuotXem, s.XuatXu, s.MoTa, s.BiXoa, l.TenLoaiSanPham, 
+            h.TenHangSanXuat 
+            FROM SanPham s, LoaiSanPham l, HangSanXuat h WHERE s.MaLoaiSanPham = l.MaLoaiSanPham 
+            AND s.MaHangSanXuat=h.MaHangSanXuat and (s.TenSanPham LIKE '%$ten%' OR l.TenLoaiSanPham = '%$ten%'OR  h.TenHangSanXuat = '%$ten%') ORDER BY s.MaSanPham ASC";
+        }
+        else{
+            $sql = "SELECT s.MaSanPham, s.TenSanPham, s.HinhURL, s.GiaSanPham, s.NgayNhap 
+            , s.SoLuongTon, s.SoLuongBan, s.SoLuotXem, s.XuatXu, s.MoTa, s.BiXoa, l.TenLoaiSanPham, 
+            h.TenHangSanXuat 
+            FROM SanPham s, LoaiSanPham l, HangSanXuat h WHERE s.MaLoaiSanPham = l.MaLoaiSanPham 
+            AND s.MaHangSanXuat=h.MaHangSanXuat ORDER BY s.MaSanPham ASC";
+        }
+       
         $result = DataProvider::ExecuteQuery($sql);
         while ($row = mysqli_fetch_array($result)) {
 
@@ -63,7 +83,7 @@
                     ?>
                 </td>
                 <td class="action">
-                    <a href="index.php?c=2&a=1&id=<?php echo $row["MaSanPham"]; ?>"><i class="material-icons update">&#xE254;</i></a>
+                    <a href="index.php?c=2&a=3&id=<?php echo $row["MaSanPham"]; ?>"><i class="material-icons update">&#xE254;</i></a>
                     <a href="pages/qlSanPham/xlXoa.php?id=<?php echo $row["MaSanPham"]; ?>"><i class="material-icons remove">&#xE872;</i></a>
                 </td>
             </tr>

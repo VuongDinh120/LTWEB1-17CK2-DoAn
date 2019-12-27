@@ -5,7 +5,7 @@ include "../../../lib/DataProvider.php";
     {
         $id = $_GET["id"];
 
-        $sql = "UPDATE HangSanXuat SET BiXoa = 1";
+        $sql = "UPDATE HangSanXuat SET BiXoa = 1 - BiXoa WHERE MaHangSanXuat = $id";
 
         DataProvider::ExecuteQuery($sql);
         DataProvider::ChangeURL("../../index.php?c=4");

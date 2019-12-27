@@ -7,7 +7,6 @@
 
     switch ($a) {
         case 1:
-            
             include "pages/qlLoaiSanPham/pDanhSach.php";
             break;
         case 2:

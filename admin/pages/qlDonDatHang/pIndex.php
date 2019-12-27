@@ -1,4 +1,4 @@
-<div id="qlDonDatHang" class="">
+<div id="qlDonDatHang" class="containz">
     <?php
     if (!isset($_GET["a"])) {
     ?>

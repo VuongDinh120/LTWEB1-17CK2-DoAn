@@ -64,6 +64,12 @@ $_SESSION["path"] = $_SERVER["REQUEST_URI"];
         case 6:
             include "pages/TaoTaiKhoan/pIndex.php";
             break;
+        case 7:
+            echo '<div class="wrapper">';
+            include "modules/mSidebar.php";
+            include "pages/pSearch.php";
+            echo '</div>';
+            break;
         default:
             include "pages/pError.php";
             break;

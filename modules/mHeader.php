@@ -36,7 +36,14 @@
                                 <form name="frmLogin" action="modules/xlDangNhap.php" method="post" onsubmit="return KiemTraDangNhap()">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="txtUS" id="txtUS" placeholder="Tên đăng nhập" required="required">
-                                        <div class="err" id="eUS"></div>
+                                        <div class="err" id="eUS">
+                                            <?php
+                                            if (isset($_GET["err"]))
+                                            {
+                                                echo "Tên Đăng nhập hoặc tài khoản không đúng";
+                                            }
+                                            ?>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control" name="txtPS" id="txtPS" placeholder="Mật khẩu" required="required">
@@ -87,7 +94,7 @@
             }
         </script>
     <?php
-            }
+        }
     ?>
     </div>
 </div>
@@ -97,10 +104,17 @@
     <a href="#">Liên hệ</a>
     <a href="#">Thông tin</a>
     <div class="search-container">
-        <form action="#" method="GET">
+        <form action="index.php" method="GET">
             <input type="text" placeholder="Tìm kiếm sản phẩm" name="txtSearch">
+            <input type="hidden" name="a" value="7">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
 </div>
 </div>
+<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#myModal').modal('show');
+    });
+
+</script>

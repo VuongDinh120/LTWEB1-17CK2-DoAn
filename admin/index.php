@@ -51,7 +51,7 @@ if (isset($_GET["c"]))
                 case 4:
                     include "pages/qlNhaSX/pIndex.php";
                 break;
-                case 3:
+                case 5:
                     include "pages/qlLoaiSanPham/pIndex.php";
                 break;
                 default:

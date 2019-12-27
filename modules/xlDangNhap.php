@@ -16,7 +16,7 @@
         $row = mysqli_fetch_array($result);
 
         if($row == null)
-            DataProvider::ChangeURL("../index.php?a=404&id=1");
+            DataProvider::ChangeURL("../index.php?a=1&err=1");
         else{
 
             $_SESSION["MaTaiKhoan"]=$row["MaTaiKhoan"];

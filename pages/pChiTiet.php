@@ -27,11 +27,7 @@ if ($row == null)
             <h4 class="product-price"><?php echo number_format($row["GiaSanPham"]); ?> ₫</h4>
             <div class="flex">
                 <div style="padding-bottom: 21px;">Số lượng</div>
-                <div class="amount">
-                    <button id="decrease" onclick="decreaseValue()" value="Decrease Value">-</button>
-                    <input type="number" name="btnSL" id="number" value="1">
-                    <button id="increase" onclick="increaseValue()" value="Increase Value">+</button>
-                </div>
+                
             </div>
             <div class="flex">
             <?php 

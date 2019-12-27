@@ -1,19 +1,16 @@
-<?php
-     if (isset($_GET["id"]))
-     $id = $_GET["id"];
- else
-     DataProvider::ChangeURL("index.php?a=404");
-
- $sql = "SELECT * FROM LoaiSanPham WHERE BiXoa = 0 AND MaLoaiSanPham = $id";
- $result = DataProvider::ExecuteQuery($sql);
- $row = mysqli_fetch_array($result)
-?>
 <div class="container">
-<h1 style="margin: 20px;">Sản Phẩm theo loại: <span><?php echo $row["TenLoaiSanPham"]?></span></h1>
+    <h1>Tìm kiếm sản phẩm</h1>
     <div class="hot-product-wrapper">
         <div class="card-wrapper">
             <?php
-            $sql = "SELECT * FROM SanPham WHERE BiXoa = 0 AND MaLoaiSanPham = $id";
+            if (isset($_GET["txtSearch"]))
+                $ten = $_GET["txtSearch"];
+            else
+                DataProvider::ChangeURL("index.php?a=404");
+
+            $sql = "SELECT * FROM SanPham s, LoaiSanPham l, HangSanXuat h  WHERE s.BiXoa = 0 AND s.MaLoaiSanPham = l.MaLoaiSanPham 
+                                AND h.MaHangSanXuat = s.MaHangSanXuat 
+                                AND (s.TenSanPham LIKE '%$ten%' OR l.TenLoaiSanPham LIKE '%$ten%' OR h.TenHangSanXuat LIKE '%$ten%')";
             $result = DataProvider::ExecuteQuery($sql);
             while ($row = mysqli_fetch_array($result)) {
             ?>
@@ -28,6 +25,5 @@
             ?>
 
         </div>
-        
     </div>
 </div>
